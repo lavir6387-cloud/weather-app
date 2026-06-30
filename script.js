@@ -10,15 +10,17 @@ const wind = document.getElementById("wind");
 const icon = document.getElementById("icon");
 searchBtn.addEventListener("click", async function () {
 
-    const city = cityInput.value;
+    const city = cityInput.value.trim();
+    if (city === "") {
+        alert("Please enter a city name");
+        return;
+    }
 
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
     const response = await fetch(url);
 
     const data = await response.json();
-
-    console.log(data);
 
     if (data.cod != 200) {
         alert(data.message);
