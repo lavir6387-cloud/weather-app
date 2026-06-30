@@ -10,25 +10,44 @@
 
 <div class="container">
 
-        <h1>Weather App</h1>
+    <h1>🌦️ Weather App</h1>
 
-<div class="search-box">
-    <input type="text" id="city"
-    placeholder="Enter City Name">
-    <button id="searchBtn">Search</button>
+    <div class="search-box">
+        <input
+            type="text"
+            id="city"
+            placeholder="Enter City Name">
+        <button id="searchBtn">Search</button>
+    </div>
+
+    <!-- Loading Message -->
+    <p id="loading" style="display: none;">Loading...</p>
+
+    <div class="weather-info">
+
+        <h2 id="cityName">Delhi</h2>
+
+        <img id="icon"
+        src="https://openweathermap.org/img/wn/01d@2x.png"
+        alt="Weather Icon">
+
+        <h1 id="temp">30°C</h1>
+
+        <p id="weather">Sunny</p>
+
+        <p id="humidity">Humidity : 45%</p>
+
+        <p id="wind">Wind : 12 km/h</p>
+
+    </div>
+
+    <footer>
+        ❤️ Made by Lavi
+    </footer>
+
 </div>
 
-<div class="weather-info">
-    <h2 id="cityName">Delhi</h2>
-
-    <img id="icon" src="https://openweathermap.org/img/wn/01d@2x.png" alt="Weather Icon">
-    <h1 id="temp">30°C</h1>
-    <p id="weather">Sunny</p>
-    <p id="humidity">Humidity : 45%</p>
-    <p id="wind">Wind : 12 km/h</p>
-</div>
-
-</div>
 <script src="script.js"></script>
+
 </body>
 </html>
