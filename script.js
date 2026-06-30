@@ -19,7 +19,11 @@ searchBtn.addEventListener("click", async function () {
     const data = await response.json();
 
     console.log(data);
-    console.log(data.name); 
+
+    if (data.cod == "200") {
+        alert(data.message);
+        return;
+    }
     cityName.innerText = data.name;
 temp.innerText = Math.round(data.main.temp) + "°C";
 weather.innerText = data.weather[0].main;
