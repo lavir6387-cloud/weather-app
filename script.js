@@ -20,7 +20,7 @@ searchBtn.addEventListener("click", async function () {
 
     console.log(data);
 
-    if (data.cod == "200") {
+    if (data.cod != 200) {
         alert(data.message);
         return;
     }
